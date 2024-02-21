@@ -22,6 +22,8 @@ namespace Assignment2
             string firstName = Console.ReadLine();
             Account account2 = new Account(accNumber,accBalance,lastName,firstName);
             account2.displayAccount();
+            SavingsAccount acc = new SavingsAccount();
+           
         }
     }
 }
