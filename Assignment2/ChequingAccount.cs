@@ -13,7 +13,7 @@ namespace Assignment2
         public ChequingAccount(string accNumber, decimal accBalance, string lastName, string firstName, decimal transactionFee)
      : base(accNumber, accBalance, lastName, firstName)
         {
-            this.transactionFee = TransactionFee;
+            this.transactionFee = transactionFee;
         }
 
 
@@ -37,10 +37,31 @@ namespace Assignment2
             }
         }
 
-        public decimal calculateInterest(decimal interestRate, decimal accBalance)
+
+
+       new public decimal credit(decimal amount)
         {
-            return interestRate * accBalance;
+            return Balance + amount-TransactionFee;
         }
+
+        new public bool debit(decimal amount)
+        {
+            if (Balance < 0)
+            {
+                Console.WriteLine("Debit amount exceeded account balance");
+
+                return false;
+            }
+            Balance -= amount-TransactionFee;
+            Console.WriteLine( "$" + amount + " Withdrawn Successfully");
+            return true;
+
+        }
+
+
+
+
+
 
         new public void displayAccount()
         {
@@ -61,7 +82,7 @@ namespace Assignment2
         }
 
 
-        public static void drawLine()
+        new public static void drawLine()
         {
             Console.Write("|");
             for (int i = 0; i < 80; i++)

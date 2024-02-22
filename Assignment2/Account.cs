@@ -79,7 +79,7 @@ namespace Assignment2
         }
         public decimal credit(decimal amount)
         {
-            return this.accBalance + amount;
+            return Balance + amount;
         }
 
         public bool debit(decimal amount)
