@@ -39,12 +39,12 @@ namespace Assignment2
 
 
 
-       new public decimal credit(decimal amount)
+        public override decimal credit(decimal amount)
         {
             return Balance + amount-TransactionFee;
         }
 
-        new public bool debit(decimal amount)
+        public override bool debit(decimal amount)
         {
             if (Balance < 0)
             {
@@ -63,7 +63,7 @@ namespace Assignment2
 
 
 
-        new public void displayAccount()
+         public override void displayAccount()
         {
             drawLine();
             Console.WriteLine($"|  {"CHEQUING ACCOUNT",45} {"|",33}");

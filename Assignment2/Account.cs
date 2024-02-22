@@ -77,12 +77,12 @@ namespace Assignment2
                 this.firstName = value;
             }
         }
-        public decimal credit(decimal amount)
+        public virtual decimal credit(decimal amount)
         {
             return Balance + amount;
         }
 
-        public bool debit(decimal amount)
+        public virtual bool debit(decimal amount)
         {
             if (Balance < 0)
             {
@@ -97,7 +97,7 @@ namespace Assignment2
         }
 
 
-        public  void displayAccount()
+        public virtual void displayAccount()
         {
             drawLine();
             Console.WriteLine($"|  {"ACCOUNT",45} {"|",33}");

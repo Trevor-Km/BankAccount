@@ -42,7 +42,7 @@ namespace Assignment2
             return interestRate * accBalance;
         }
 
-         new public  void displayAccount()
+         public override void displayAccount()
         {
             drawLine();
             Console.WriteLine($"|  {"SAVINGS ACCOUNT",45} {"|",33}");
