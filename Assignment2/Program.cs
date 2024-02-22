@@ -84,20 +84,7 @@ namespace Assignment2
                 drawLine();
             }
         }
-        //public void displayBalance()
-        //{
-        //    drawLine();
-        //    Console.WriteLine($"|  {"SAVINGS BALANCE",45} {"|",33}");
-        //    drawLine();
-        //    Console.WriteLine($"| {"Account Number",-25} | {saving.AccNumber,50} |");
-        //    drawLine();
-        //    Console.WriteLine($"| {"Balance Amount ",-25} | {"$" + Balance,50} |");
-        //    drawLine();
-        //    Console.WriteLine($"| {"Last Name",-25} | {LastName,-50} |");
-        //    drawLine();
-        //    Console.WriteLine($"| {"First Name",-25} | {FirstName,-50} |");
-        //    drawLine();
-        //}
+        
 
 
         public static void drawLine()
