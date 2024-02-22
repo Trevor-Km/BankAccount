@@ -41,7 +41,7 @@ namespace Assignment2
 
         public override decimal credit(decimal amount)
         {
-            return Balance + amount;
+            return Balance + amount - transactionFee;
         }
 
         public override bool debit(decimal amount)
@@ -52,7 +52,7 @@ namespace Assignment2
 
                 return false;
             }
-            Balance -= amount;
+            Balance =  Balance - amount - transactionFee;
             Console.WriteLine( "$" + amount + " Withdrawn Successfully");
             return true;
 

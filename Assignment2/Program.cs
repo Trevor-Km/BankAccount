@@ -32,13 +32,13 @@ namespace Assignment2
                 decimal withDrawAmount = decimal.Parse(Console.ReadLine());
                 
                 
-                cheq.displayAccount();              
-                 
+                cheq.displayAccount();
+                cheq.debit(withDrawAmount);
+                drawLine();
                 Console.WriteLine($"|  {"CHEQUING BALANCE",45} {"|",33}");
                 drawLine();
-                Console.WriteLine($"| {"Balance Amount Before Debit ",-25} | {"$" + cheq.Balance,-45}   |");
-                drawLine();
-                
+                Console.WriteLine($"| {"Balance Amount Before Debit ",-25} | {"$" + accBalance,-45}   |");
+                drawLine();      
                 Console.WriteLine($"| {"Balance Amount After Debit ",-25}  | {"$" + (cheq.Balance),-45}   |");
                 drawLine();
                 Console.WriteLine();
@@ -50,7 +50,7 @@ namespace Assignment2
                 Console.WriteLine($"| {"Balance Amount Before Credit ",-25} | {"$" + cheq.Balance,-45}  |");
                 drawLine();
                 
-                Console.WriteLine($"| {"Balance Amount After Credit ",-25}  | {"$" + (cheq.credit(100) -  transactionFee),-45}  |");
+                Console.WriteLine($"| {"Balance Amount After Credit ",-25}  | {"$" + (cheq.credit(100)) ,-45}  |");
                 drawLine();
                 Console.WriteLine();
 
