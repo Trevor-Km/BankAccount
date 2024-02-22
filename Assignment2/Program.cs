@@ -21,9 +21,9 @@ namespace Assignment2
             Console.WriteLine("Please Enter First Name");
             string firstName = Console.ReadLine();
             Account account2 = new Account(accNumber,accBalance,lastName,firstName);
-            account2.displayAccount();
-            SavingsAccount acc = new SavingsAccount();
-           
+           // account2.displayAccount();
+           SavingsAccount saving = new SavingsAccount(accNumber,accBalance,lastName,firstName,0.05m);
+           saving.displayAccount();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Assignment2
         public Account(string accNumber, decimal accBalance, string lastName, string firstName)
         {
             AccNumber = accNumber;
-           Balance = accBalance;
+            Balance = accBalance;
             LastName = lastName;
             FirstName = firstName;
         }
@@ -44,7 +44,8 @@ namespace Assignment2
                 if (accBalance >= 0.0m)
                 {
                     this.accBalance = value;
-                } else
+                }
+                else
                 {
                     this.accBalance = 0;
                     Console.WriteLine("Account initial balance must be a positive value");
@@ -96,7 +97,7 @@ namespace Assignment2
         }
 
 
-        public void displayAccount()
+        public  void displayAccount()
         {
             drawLine();
             Console.WriteLine($"|  {"ACCOUNT",45} {"|",33}");
