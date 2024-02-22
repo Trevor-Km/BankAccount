@@ -30,17 +30,30 @@ namespace Assignment2
                 ChequingAccount cheq = new ChequingAccount(accNumber, accBalance, lastName,firstName, transactionFee);
                Console.WriteLine("Please Enter Withdrawal Amount");
                 decimal withDrawAmount = decimal.Parse(Console.ReadLine());
-                cheq.displayAccount();
-                cheq.credit(100);
-
+                
+                
+                cheq.displayAccount();              
+                 
                 Console.WriteLine($"|  {"CHEQUING BALANCE",45} {"|",33}");
                 drawLine();
                 Console.WriteLine($"| {"Balance Amount Before Debit ",-25} | {"$" + cheq.Balance,-45}   |");
                 drawLine();
-                Console.WriteLine($"| {"Balance Amount After Debit ",-25}  | {"$" + (cheq.Balance-withDrawAmount-transactionFee),-45}   |");
+                
+                Console.WriteLine($"| {"Balance Amount After Debit ",-25}  | {"$" + (cheq.Balance),-45}   |");
                 drawLine();
                 Console.WriteLine();
-                cheq.debit(withDrawAmount);
+                
+                
+                drawLine();
+                Console.WriteLine($"|  {"CHEQUING BALANCE",45} {"|",33}");
+                drawLine();
+                Console.WriteLine($"| {"Balance Amount Before Credit ",-25} | {"$" + cheq.Balance,-45}  |");
+                drawLine();
+                
+                Console.WriteLine($"| {"Balance Amount After Credit ",-25}  | {"$" + (cheq.credit(100) -  transactionFee),-45}  |");
+                drawLine();
+                Console.WriteLine();
+
 
 
             }
@@ -80,7 +93,7 @@ namespace Assignment2
                 drawLine();
                 Console.WriteLine($"| {"Balance Amount Before Deposit ",-25} | {"$" + saving.Balance,-45} |");
                 drawLine();
-                Console.WriteLine($"| {"Balance Amount After Deposit ",-25}  | {"$" + (saving.Balance + transactionAmount),-45} |");
+                Console.WriteLine($"| {"Balance Amount After Deposit ",-25}  | {"$" + (saving.Balance + saving.credit(transactionAmount)),-45} |");
                 drawLine();
             }
         }

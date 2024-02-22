@@ -84,7 +84,7 @@ namespace Assignment2
 
         public virtual bool debit(decimal amount)
         {
-            if (Balance < 0)
+            if (Balance < amount)
             {
                 Console.WriteLine("Debit amount exceeded account balance");
 

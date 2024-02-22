@@ -41,18 +41,18 @@ namespace Assignment2
 
         public override decimal credit(decimal amount)
         {
-            return Balance + amount-TransactionFee;
+            return Balance + amount;
         }
 
         public override bool debit(decimal amount)
         {
-            if (Balance < 0)
+            if (Balance < amount)
             {
                 Console.WriteLine("Debit amount exceeded account balance");
 
                 return false;
             }
-            Balance -= amount-TransactionFee;
+            Balance -= amount;
             Console.WriteLine( "$" + amount + " Withdrawn Successfully");
             return true;
 
