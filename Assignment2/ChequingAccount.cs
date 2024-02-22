@@ -82,7 +82,7 @@ namespace Assignment2
         }
 
 
-        new public static void drawLine()
+         public override void drawLine()
         {
             Console.Write("|");
             for (int i = 0; i < 80; i++)
